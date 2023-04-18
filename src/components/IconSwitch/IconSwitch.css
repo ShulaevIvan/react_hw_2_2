@@ -1,0 +1,16 @@
+.icon-switch-panel-wrap {
+    display: flex;
+    width: 95%;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 50px;
+}
+.icon-switch-panel-btn-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+.icon-switch-panel-btn-wrap span {
+    cursor: pointer;
+}
