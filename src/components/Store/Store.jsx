@@ -45,12 +45,12 @@ const Store = () => {
             listStyle: CardView,
           });
         }
-        return setViewState({
-            ...viewState,
-            viewIcon: 'view_module',
-            listStyle: ListView,
-          });
-        
+        return setViewState(prev => prev = {
+          ...viewState,
+          viewIcon: 'view_module',
+          listStyle: ListView,
+        })
+
       }
 
       const initialState = {
