@@ -19,21 +19,19 @@ const ShopItem = (props) => {
             </React.Fragment>
         );
     }
-    else {
-        return (
-            <React.Fragment>
-                <div className="card-column">
-                    <div className="card-item-column-row">
-                        <div className="card-item-column-img-wrap"><img src={props.productInfo.img}/></div>
-                        <div className="card-item-column-title">{props.productInfo.name}</div>
-                        <div className="card-item-column-color">{props.productInfo.color}</div>
-                        <div className="card-item-column-price">$ {props.productInfo.price}</div>
-                        <div className="card-item-column-btn-wrap"><a href="#" className="add-to-card-btn">add to cart</a></div>
-                    </div>
+    return (
+        <React.Fragment>
+            <div className="card-column">
+                <div className="card-item-column-row">
+                    <div className="card-item-column-img-wrap"><img src={props.productInfo.img}/></div>
+                    <div className="card-item-column-title">{props.productInfo.name}</div>
+                    <div className="card-item-column-color">{props.productInfo.color}</div>
+                    <div className="card-item-column-price">$ {props.productInfo.price}</div>
+                    <div className="card-item-column-btn-wrap"><a href="#" className="add-to-card-btn">add to cart</a></div>
                 </div>
-            </React.Fragment>
-        );
-    }
+            </div>
+        </React.Fragment>
+    ); 
 }
 
 export default ShopItem;

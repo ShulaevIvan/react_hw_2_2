@@ -39,30 +39,27 @@ const Store = () => {
 
       const onSwitch = (e) => {
         if (viewState.viewIcon === 'view_module') {
-          setViewState({
+          return setViewState({
             ...viewState,
             viewIcon: 'view_list',
-            listStyle: CardView
+            listStyle: CardView,
           });
         }
-        else {
-          setViewState({
+        return setViewState({
             ...viewState,
             viewIcon: 'view_module',
-            listStyle: ListView
+            listStyle: ListView,
           });
-        }
         
       }
 
       const initialState = {
         viewIcon: 'view_list',
         switchFunc: onSwitch,
-        listStyle: CardView
-      }
-      
+        listStyle: CardView,
+      };
+
       const [viewState, setViewState] = useState(initialState);
-      console.log(viewState)
 
       return (
         <React.Fragment>
@@ -70,7 +67,7 @@ const Store = () => {
             <viewState.listStyle products={products} productsStyle = {viewState.viewIcon}></viewState.listStyle>
         </React.Fragment>
         
-      )
+      );
 }
 
 export default Store
